@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/zahrahiu/mini-vlog_Mongodb.git'
+                // Spécifier branch main explicitly
+                git branch: 'main', url: 'https://github.com/zahrahiu/mini-vlog_Mongodb.git'
             }
         }
         stage('Build Docker Image') {
